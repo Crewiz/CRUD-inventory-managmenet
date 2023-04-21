@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Inventory Management</title>
+</head>
+<body>
+  <h1>Inventory Management</h1>
+  <form action="/add" method="POST">
+    <input type="text" name="name" placeholder="Item name" required>
+    <input type="number" name="quantity" placeholder="Quantity" required>
+    <button type="submit">Add Item</button>
+  </form>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each items}}
+        <tr>
+          <form action="/update" method="POST">
+            <td>
+              <input type="text" name="name" value="{{this.name}}" required>
+              <input type="hidden" name="id" value="{{this._id}}">
+            </td>
+            <td>
+              <input type="number" name="quantity" value="{{this.quantity}}" required>
+            </td>
+            <td>
+              <button type="submit">Update</button>
+            </form>
+            <form action="/delete" method="POST">
+              <input type="hidden" name="id" value="{{this._id}}">
+              <button type="submit">Delete</button>
+            </form>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</body>
+</html>

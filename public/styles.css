@@ -1,0 +1,172 @@
+:root {
+    --main-bg-color: #f4f4f4;
+    --main-text-color: #333;
+    --accent-color: #2a9d8f;
+    --button-bg-color: #e9c46a;
+    --button-hover-color: #f4a261;
+  }
+  
+
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  table,
+  th,
+  td {
+    border: 1px solid #ccc;
+  }
+  
+  th,
+  td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  .form-inline {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  input[type='text'],
+  input[type='number'] {
+    width: 100%;
+    padding: 6px 12px;
+    margin: 5px 0;
+    box-sizing: border-box;
+  }
+  
+  input[type='submit'] {
+    background-color: var(--button-bg-color);
+    color: white;
+    padding: 6px 12px;
+    margin: 5px 0;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type='submit']:hover {
+    background-color: var(--button-hover-color);
+  }
+  
+  .delete-btn {
+    background-color: #f44336;
+    color: white;
+    padding: 6px 12px;
+    margin: 5px 0;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .delete-btn:hover {
+    background-color: #e62e00;
+  }
+  
+  /* Mobile devices */
+@media (max-width: 767px) {
+    .container {
+      width: 100%;
+      padding: 0 15px;
+    }
+  
+    .item-row {
+      display: block;
+      text-align: center;
+    }
+  
+    .item-row div {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+  
+  /* Tablet devices */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .container {
+      width: 100%;
+      padding: 0 15px;
+    }
+  
+    .item-row {
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+    }
+  
+    .item-row div {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+  body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--main-text-color);
+    background-color: var(--main-bg-color);
+  }
+  
+  h1 {
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  
+  button,
+input[type="submit"],
+input[type="button"] {
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover {
+  background-color: var(--button-hover-color);
+  cursor: pointer;
+}
+
+button:active,
+input[type="submit"]:active,
+input[type="button"]:active {
+  transform: scale(0.98);
+}
+
+input[type="text"],
+input[type="number"] {
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 3px rgba(42, 157, 143, 0.5);  
+}
+
+a {
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
